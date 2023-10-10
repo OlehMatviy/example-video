@@ -1,0 +1,75 @@
+{
+    "env": {
+        "es2021": true,
+        "node": true,
+        "react-native/react-native": true
+    },
+    "extends": [
+        "airbnb",
+        "airbnb-typescript",
+        "plugin:react-native/all",
+        "plugin:import/typescript",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": [
+        "react",
+        "react-native",
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "rules": {
+        "import/prefer-default-export": ["off"],
+        "import/export": ["off"],
+        "react/react-in-jsx-scope": ["off"],
+        "react/jsx-uses-react": ["off"],
+        "react/jsx-props-no-spreading": ["off"],
+        "react/no-array-index-key": ["warn"],
+        "react/no-unescaped-entities": ["off"],
+        "react/function-component-definition": [
+            "error",
+            {
+              "namedComponents": ["function-declaration", "arrow-function"]
+            }
+        ],
+        "jsx-a11y/label-has-associated-control": ["error", {
+            "required": {
+              "some": ["nesting", "id"]
+            }
+          }],
+          "jsx-a11y/label-has-for": ["error", {
+            "required": {
+              "some": ["nesting", "id"]
+            }
+        }],
+        "react/require-default-props": "off",
+        "prefer-destructuring": ["error", {"object": true, "array": false}],
+        "react-native/no-unused-styles": 2,
+        "react-native/split-platform-components": 2,
+        "react-native/no-inline-styles": 2,
+        "react-native/no-color-literals": 2,
+        "react-native/no-raw-text": 2,
+        "react-native/sort-styles": [
+            "error",
+            "asc",
+            {
+                "ignoreClassNames": false,
+                "ignoreStyleProperties": false
+            }
+        ],
+        "no-use-before-define": ["error", {"functions": false, "classes": false}],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+        "no-param-reassign": [2, { "props": false }],
+        "global-require": 0,
+        "no-promise-executor-return": "off",
+        "lines-between-class-members": ["error", "never"]
+    }
+}
